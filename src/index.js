@@ -99,8 +99,8 @@ export async function run() {
         } else if (distro === "fedora") {
           await execShellCommand(optionalSudoPrefix + 'dnf install -y xz openssh');
         } else {
-          await execShellCommand(optionalSudoPrefix + 'apt-get update');
-          await execShellCommand(optionalSudoPrefix + 'apt-get install -y openssh-client xz-utils');
+          // await execShellCommand(optionalSudoPrefix + 'apt-get update');
+          // await execShellCommand(optionalSudoPrefix + 'apt-get install -y openssh-client xz-utils');
         }
 
         const tmateArch = TMATE_ARCH_MAP[os.arch()];
